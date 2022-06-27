@@ -225,6 +225,9 @@ LATEST ARTICLE CARD SECTION ENDS
 LATEST ARTICLE SECTION END
 */
 
+/* 
+Footer
+*/
 footer {
 	background-color: var(--Dark-Blue);
 	color: var(--White);
@@ -301,6 +304,9 @@ footer ul li {
 		margin-left: 30px;
 	}
 }
+/* 
+Footer End
+*/
 
 /*
 Attribution
