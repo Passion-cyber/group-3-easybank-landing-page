@@ -27,6 +27,7 @@ Font
 	--Very-Light-Gray: hsl(0, 0%, 98%);
 	--White: hsl(0, 0%, 100%);
 	--gradient: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+	--hover-gradient: linear-gradient(to right, hsl(136, 65%, 51%, 0.6), hsl(192, 70%, 51%, 0.6));
 }
 
 body {
@@ -39,6 +40,9 @@ body {
 	margin: auto;
 	padding-block: 3em;
 	padding-inline: 2em;
+}
+a {
+	text-decoration: none;
 }
 
 /* 
@@ -190,6 +194,10 @@ LATEST ARTICLE CARD SECTION
 	margin-bottom: 0.5em;
 }
 
+.latest-article-card-detail h4:hover {
+	color: var(--Lime-Green);
+}
+
 .latest-article-card-detail .quote {
 	color: var(--Grayish-Blue);
 	font-size: 0.9em;
@@ -238,32 +246,47 @@ footer {
 	margin-bottom: 2em;
 }
 
-.footer-logo {
-	position: relative;
-	bottom: 30px;
-	left: 20px;
-	font-size: 1.3em;
+.footer-media-icons {
+	margin-top: 2rem;
 }
 
-.footer-media-icons img {
-	margin-top: 15px;
-	width: 28px;
+.footer-media-icons a i {
+	color: var(--White);
+	font-size: 1.5rem;
 	margin-inline: 8px;
 }
 
-footer ul li {
+.footer-media-icons :hover {
+	color: var(--Lime-Green);
+}
+
+.footer-details li {
 	list-style: none;
-	color: var(--Light-Grayish-Blue);
 	margin-block: 1rem;
 }
 
-.footer-request .btn {
+.footer-details li a {
+	color: var(--Light-Grayish-Blue);
+}
+
+.footer-details li a:hover {
+	color: var(--Lime-Green);
+}
+
+.btn {
 	padding: 15px 40px;
-	color: var(--White);
 	background-image: var(--gradient);
 	border: 0;
 	border-radius: 30px;
 	margin-block: 1.5rem;
+}
+
+.btn a {
+	color: var(--White);
+}
+
+.btn:hover {
+	background-image: var(--hover-gradient);
 }
 
 .copyright {
@@ -271,7 +294,7 @@ footer ul li {
 	margin-top: 20px;
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
 	footer .container {
 		display: flex;
 		justify-content: space-between;
@@ -280,6 +303,11 @@ footer ul li {
 
 	footer section {
 		display: flex;
+	}
+
+	.footer-contact {
+		margin-top: 20px;
+		text-align: start;
 	}
 
 	.space-between {
